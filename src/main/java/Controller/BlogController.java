@@ -30,7 +30,7 @@ public class BlogController {
         return blogMD.searchBlogs(searchTerm);
     }
 
-/*
+/**
     to test any of these request, use something like postman and make requests to the appropriate URL
     (or curl, if you're a god-damn animal)
     in the request body, set the payload to the appropriate key:val pairs
@@ -43,8 +43,7 @@ public class BlogController {
     sees if the key matches any of the types mentioned in the method (body.get("keyName"))
     ya'dig? Ooh man, the melatonin is starting to kick in
 
- */
-
+ **/
 
     @PostMapping("/blog")
     public Blog create(@RequestBody Map<String, String> body){
