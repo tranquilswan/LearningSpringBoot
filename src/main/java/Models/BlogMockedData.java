@@ -7,8 +7,8 @@ public class BlogMockedData {
 
     private List<Blog> blogs;
 
-    //Singleton Assurance
-
+    //The idea is that this class will mimic our database.
+    //So we use a singleton here to make sure that we only have one version of our database.
     private static BlogMockedData instance = null;
     public static BlogMockedData getInstance(){
         if(instance == null){
@@ -59,6 +59,8 @@ public class BlogMockedData {
     public Blog createBlog(int id, String title, String content) {
         Blog newBlog = new Blog(id, title, content);
         blogs.add(newBlog);
+        //just checking the hashcode. Every object has one. EVERY OBJECT!
+        System.out.println("hashcode: " + newBlog.hashCode());
         return newBlog;
     }
 
